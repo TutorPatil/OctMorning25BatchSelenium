@@ -1,0 +1,31 @@
+Absolute X Path for user name field
+
+/html/body/div/input[1]
+
+
+Relative
+//input[@id='username']
+
+
+
+//input[@type='text' and @value='please enter username']
+//input[@type='text'][@value='please enter username']
+//input[@type='text' or @value='please enter username']
+//a[@href='https://google.com']
+//table/tbody/tr[2]/td[2]
+identify using text
+//a[text()='ForgotPassword']
+//span[text()=' Please enter your details , we will get back to you']
+//td[text()='Shamu@gmail.com']
+
+Below elements conatim text
+a, span, td, div, h1, h2, 
+
+
+identify using portion of the text
+//a[contains(text(),'Forgot')]
+
+Poration of the attribute
+//a[contains(@href,'google.com')]
+
+
