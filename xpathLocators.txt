@@ -28,4 +28,61 @@ identify using portion of the text
 Poration of the attribute
 //a[contains(@href,'google.com')]
 
+// in the middle of x path shows any where wrt to the node
+//table/tbody//a
 
+
+To locate first input element from the DOM
+(//input)[1]
+
+(//table/tbody/tr)[2]
+
+// To locate email id for emp id 101  -- * -> any tag 
+//table/tbody/tr/td[1][text()='101']/../td[4]/*[contains(text(),'a')]
+
+//*[@id='username']
+
+==========================
+
+Preceeding
+
+//button[@id='canBtn']/preceding::*
+//button[@id='canBtn']/preceding::input  -- > wrt context node all the nodes before this node
+
+(//button[@id='canBtn']/preceding::input)[2] - > filtering 2 input
+
+following
+
+//button[@id='canBtn']/following::* - > finds  all the nodes following ( after/ below ) the context node
+
+//button[@id='canBtn']/following::a
+
+Axes Functions
+
+following-sibling
+
+Selects all siblings that are at the same level and come after the current node.
+//table/tbody/tr[2]/td[1][text()='101']/following-sibling::td[3]
+//table/tbody/tr[2]/td[1][text()='101']/following-sibling::*
+
+preceding-sibling
+Selects all nodes before the current node, regardless of hierarchy.
+//table/tbody/tr[2]/td[1][text()='101']/following-sibling::td[3]/preceding-sibling::*
+//table/tbody/tr[2]/td[4]/preceding-sibling::td[2]
+
+Parent
+Locating parent of the context node , this  is equal to using .. ( double dots )
+//table/tbody/tr[2]/td[4]/parent::*
+
+
+//td[text()='Ramu']/parent::*
+//td[text()='Ramu']/../
+
+Ancestor - Parent - Parents's parent and so on
+//table/tbody/tr[2]/td[4]/ancestor::*
+//td[text()='Ramu']/ancestor-or-self::*
+
+Descendant - > child, child child and  so on..
+
+//td[text()='Ramu']/../descendant::*
+//td[text()='Ramu']/../descendant-or-self::*
