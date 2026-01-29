@@ -1,0 +1,5 @@
+Use the below git hub repo to clone the same and run
+
+https://github.com/TutorPatil/SelenumMaven.git
+
+mvn test
